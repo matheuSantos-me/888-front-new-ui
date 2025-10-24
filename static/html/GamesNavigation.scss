@@ -1,0 +1,81 @@
+@import '~styles/base/variables';
+@import '~styles/base/mixins';
+
+.games-navigation {
+    --ripple-color: #{white};
+
+    display: var(--games-navigation-display, block);
+    border-top: 1px solid rgba($white, 0.05);
+    background-color: var(--game-navigation);	
+    color: var(--game-navigation-text);
+	display:none;
+
+    .tabs-bar,
+    .tabs-bar-arrow {
+        background-color: var(--game-navigation);
+		display:none;
+    }
+
+    .tabs-bar-arrow i,
+    .tabs-bar-item .game-title {
+        opacity: 0.5;
+        @include transition(opacity);
+    }
+
+    .tabs-bar-item {
+        position: relative;
+        min-width: unset;
+        text-transform: uppercase;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 0 1.4em;
+
+        .game-title {
+            font: 700 1em var(--font-condensed);
+
+            .game-title-label {
+                position: relative;
+            }
+        }
+
+        .game-data {
+            font-size: 0.8em;
+        }
+
+        &.active {
+            border-bottom-color: var(--game-navigation-active-text);
+            color: var(--game-navigation-active-text);
+
+            &,
+            &:hover {
+                background-color: var(--game-navigation-active);
+            }
+
+            .game-title {
+                color: inherit;
+                opacity: 1;
+            }
+        }
+    }
+
+    .tabs-bar-arrow:hover i,
+    .tabs-bar-item:hover .game-title {
+        @include not-mobile {
+            opacity: 1;
+        }
+    }
+
+    .game-label {
+        position: absolute;
+        font-size: 0.63em;
+        top: -0.3em;
+        right: -2.5em;
+    }
+
+    .non-live-label {
+        position: absolute;
+        font-size: 0.63em;
+        top: 0;
+        margin: auto;
+    }
+}

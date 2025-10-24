@@ -1,0 +1,99 @@
+html, body,
+body #__nuxt,
+body #__layout {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.body-scroll {
+  height: 100%;
+
+  .el-scrollbar__wrap {
+    overflow-x: auto;
+  }
+
+  .page-component-up {
+    background-color: #2e2d2b;
+    position: fixed;
+    right: 260px;
+    bottom: 40px;
+    size: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.12);
+    z-index: 2001;
+
+    i {
+      color: #f7d512;
+      display: block;
+      line-height: 40px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    &.hover {
+      opacity: 1;
+    }
+  }
+  .back-top-fade-enter,
+  .back-top-fade-leave-active {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+}
+
+.cheadbar{
+  padding: 0px;
+  /* background-color: #2d3a4b; */
+}
+
+.cheadbar-mobile{
+  background-color: #2d3a4b;
+  color: white;
+  width: 100%;
+  z-index: 1500;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 10000;
+  left: 100%;
+  top: 0;
+  // background-color: rgb(48, 65, 86);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+#mySidenav {
+  left: 0;
+}
+
+#main {
+  transition: margin-left 0.5s;
+}
+
+@media screen and (max-height: 450px) {
+  /* .sidenav {padding-top: 15px;} */
+  .sidenav a {
+    font-size: 18px;
+  }
+}

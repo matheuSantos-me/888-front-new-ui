@@ -1,0 +1,10 @@
+.root {
+    position: relative;
+}
+@media (min-width: 768px)
+nav.top-navigation {
+    display: none;
+}
+nav.games-navigation {
+    display: none;
+}

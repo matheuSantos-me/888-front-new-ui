@@ -1,0 +1,12 @@
+
+.bg-orange12 { background: #fc6200 !important; }
+
+.secondary{color: #fff; background: #fc6200; border:2px solid #fc6200; border-radius: 15px; padding:6px 20px 5px 10px; outline: none;}
+.tertiary{color: #fff; background: none; border:2px solid #fc6200; border-radius: 15px; padding:6px 10px 5px 10px; outline: none;}
+
+
+/*JOIN*/
+ol{ padding-left:0}
+.bwizard-steps li.active{background: #fc6200 !important;color: #ffffff;}
+.bwizard-steps li.active:hover{background:#e85c00 !important}
+.bwizard-steps li.active small{color: #151515 !important;}

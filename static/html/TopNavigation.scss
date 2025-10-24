@@ -1,0 +1,82 @@
+@import '~styles/base/mixins';
+@import '~styles/base/variables';
+
+.top-navigation {
+    --ripple-color: #{$white};
+
+    display: var(--top-navigation-display, flex);
+    height: 3em;
+    color: var(--navigation-text);
+    font-family: var(--font-condensed);
+    font-weight: 700;
+    padding-left: 0.3em;
+    background-color: var(--navigation);
+	display:none;
+
+    @include bp-small {
+        padding-left: 0.7em;
+		display:none;
+    }
+}
+
+.top-navigation-children {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.top-navigation-item {
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5%;
+    color: inherit;
+    position: relative;
+    opacity: 0.5;
+    @include transition(opacity);
+
+    @include bp-small {
+        padding: 0 1.2em;
+    }
+
+    @include bp-xlarge {
+        padding: 0 1.4em;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    @include not-mobile {
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &.active {
+        opacity: 1;
+    }
+
+    > .title {
+        margin-left: 0.6em;
+        display: none;
+
+        @include bp-small {
+            display: block;
+            font-family: $font-sans;
+            font-size: 0.7em;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+
+    .icon {
+        font-size: 1.3em;
+        line-height: inherit;
+    }
+
+    &.dealers-navigation-item {
+        display: var(--dealers-navigation-item, flex);
+    }
+}

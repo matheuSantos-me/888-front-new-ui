@@ -1,0 +1,587 @@
+.mini-bet-panel {
+  position: absolute;
+  left: 830px;
+  top: 0;
+  width: calc(100% - 830px);
+  border-left: 5px solid #171c22;
+  background-color: #996148;
+  color: #fff;
+  height: 641px;
+}
+.mini-sure-bet-panel {
+  position: absolute;
+  left: 659px;
+  top: 0;
+  width: calc(100% - 659px);
+  border-left: 5px solid #171c22;
+  background-color: #996148;
+  color: #fff;
+  height: 641px;
+}
+.mini-surel-bet-panel {
+  position: absolute;
+  left: 683px;
+  top: 0;
+  width: calc(100% - 683px);
+  border-left: 5px solid #171c22;
+  background-color: #996148;
+  color: #fff;
+  height: 641px;
+}
+.mini-surer-bet-panel {
+  position: absolute;
+  left: 830px;
+  top: 0;
+  width: calc(100% - 830px);
+  border-left: 5px solid #171c22;
+  background-color: #996148;
+  color: #fff;
+  height: 641px;
+}
+
+.mini-boscore-bet-panel {
+  position: absolute;
+  left: 800px;
+  top: 0;
+  width: calc(100% - 800px);
+  border-left: 5px solid #171c22;
+  background-color: #996148;
+  color: #fff;
+  height: 600px;
+}
+.mini-boscoreball-bet-panel {
+  position: absolute;
+  left: 800px;
+  top: 0;
+  width: calc(100% - 800px);
+  border-left: 5px solid #171c22;
+  background-color: #996148;
+  color: #fff;
+  height: 700px;
+}
+
+
+.mini-bubble-bet-panel {
+  position: absolute;
+  left: 830px;
+  top: 0;
+  width: calc(100% - 830px);
+  border-left: 5px solid #171c22;
+  background-color: #996148;
+  color: #fff;
+  height: 609px;
+}
+
+.mini-livescore-bet-panel {
+  position: absolute;
+  left: 854px;
+  top: 0;
+  width: calc(100% - 854px);
+  border-left: 5px solid #171c22;
+  background-color: #996148;
+  color: #fff;
+  height: 746px;
+}
+
+.mini-game-frame, .bet-game-frame, .mini-game-boscoreball-frame, #mini-game-frame-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.sure-game-frame {
+  position: absolute;
+}
+#sureframe {
+  width: 830px;
+  height: 641px;
+}
+
+.mini-game-frame, .sure-game-frame, .bet-game-frame, .mini-game-boscoreball-frame {
+  touch-action: auto;
+}
+
+.east-game-frame, #east-game-frame-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#mini-game-frame-container-in {
+  width: 830px;
+  height: 641px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#sure-game-frame-container-in {
+  width: 659px;
+  height: 641px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+#surel-game-frame-container-in {
+  width: 683px;
+  height: 641px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+#surer-game-frame-container-in {
+  width: 658px;
+  height: 641px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#east-game-frame-container-in {
+  width: 830px;
+  height: 560px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#boscore-game-frame-container-in {
+  width: 800px;
+  height: 600px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#bubble-game-frame-container-in {
+  width: 830px;
+  height: 609px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#boscoreball-game-frame-container-in {
+  width: 800px;
+  height: 700px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#livescore-game-frame-container-in {
+  width: 854px;
+  height: 746px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.sure-race-frame {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.mini-bet-lock {
+  width: 100%;
+  background-color: rgba(0, 0 , 0, 0.6);
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.east-bet-lock {
+  width: 100%;
+  background-color: rgba(0, 0 , 0, 0.6);
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.east-bet-panel {
+  position: absolute;
+  left: 830px;
+  top: 0;
+  width: calc(100% - 830px);
+  border-left: 5px solid #171c22;
+  background-color: #153939;
+  color: #fff;
+  height: 560px;
+}
+
+.text-brown {
+  color: #f9e5c0;
+}
+
+.bg-brown {
+  background-color: #4a3427;
+}
+
+.bg-brown1 {
+  background-color: #674836;
+}
+
+
+.mini-bet-row {
+  padding: 9px 0;
+  border-top: 1px solid #74503a;
+}
+
+.east-bet-row {
+  padding: 9px 0;
+  border-top: 2px solid #02b9c7;
+}
+
+.mini-bet-type {
+  background-color: #674836;
+  border: 1px solid #674836;
+  padding: 28px 0;
+  margin: 8px 5%;
+  width: 90%;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mini-bet-type-on {
+  background-color: #674836;
+  border: 1px solid #e2c659;
+  padding: 28px 0;
+  margin: 8px 5%;
+  width: 90%;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mini-bet-type-name {
+  background-color: #674836;
+  color: #e9d6b5;
+  border: 1px solid #4b3528;
+  font-size: 14px;
+  width: 90%;
+  margin: 0 5%;
+  height: 91px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: keep-all;
+}
+
+.east-bet-type-name {
+  background-color: #0d3131;
+  color: #fff;
+  border: 2px solid #02b9c7;
+  font-size: 14px;
+  width: 90%;
+  margin: 0 5%;
+  height: 91px;
+  padding-top: 35px;
+}
+
+.east-bet-button {
+  background-color: #124e4e;
+  color: #fff;
+  width: 90%;
+  margin: 0 5%;
+  border: 2px solid #01b8c6;
+  height: 91px;
+  cursor: pointer;
+}
+
+.east-bet-button:hover {
+  background-color: #36a1a9;
+}
+
+.east-bet-button:hover .mini-bet-base {
+  display: none;
+}
+
+.mini-bet-button {
+  background-color: #e2c65b;
+  color: #4b3422;
+  width: 90%;
+  margin: 0 5%;
+  border: 1px solid #684935;
+  height: 91px;
+  cursor: pointer;
+}
+
+.mini-bet-button:hover {
+  background-color: #a6937c;
+  color: #fff;
+}
+
+.mini-bet-button:hover .mini-bet-odds-value {
+  background-color: #a6937c;
+  color: #a6937c;
+}
+
+.mini-bet-button:hover .mini-bet-base {
+  display: none;
+}
+
+.mini-bet-button:hover .mini-bet-img-size {
+  display: none;
+}
+
+.mini-bet-button-keno {
+  background-color: #e2c65b;
+  color: #4b3422;
+  width: 98%;
+  margin: 0 1%;
+  border: 1px solid #684935;
+  height: 91px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mini-bet-button-keno:hover {
+  background-color: #a6937c;
+  color: #fff;
+}
+
+.mini-bet-button-keno:hover .mini-bet-base {
+  display: none;
+}
+
+.mini-bet-odds-value {
+  background-color: #4a3427;
+  color: #fff;
+}
+
+.mini-bet-img {
+  width: 45px;
+}
+
+.mini-bet-num-img {
+  width: 30px;
+}
+
+.mini-bet-lad-img {
+  width: 50px;
+}
+
+.mini-bet-lad-img-small {
+ width: 35px; 
+}
+
+.mini-bet-lad-img-plus {
+  width: 15px;
+}
+
+.east-goal-img {
+  width: 51px;
+}
+
+.gameoutter {
+  margin-top: 0 !important;
+}
+
+.mini-ifram-lock {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  display: block;
+}
+
+.mini-mob-tab {
+  padding: 20px 0 30px 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+@media (max-width: 1600px) {
+  .mini-game-frame {
+    left: -241px;
+  }
+  .mini-game-boscoreball-frame {
+    left: -241px;
+  }
+
+  .east-game-frame {
+    left: -110px;
+  }
+
+  #mini-game-frame-container-in {
+    width: 589px;
+  }
+
+  #east-game-frame-container-in {
+    width: 720px;
+  }
+
+  #boscore-game-frame-container-in {
+    width: 670px;
+  }
+
+  #bubble-game-frame-container-in {
+    width: 730px;
+  }
+
+  #boscoreball-game-frame-container-in {
+    width: 600px;
+  }
+
+  #livescore-game-frame-container-in {
+    width: 597px;
+  }
+
+  .mini-bet-panel {
+    left: 589px;
+    width: calc(100% - 589px);
+  }
+  .mini-boscore-bet-panel {
+    left: 670px;
+    width: calc(100% - 670px);
+  }
+  .mini-boscoreball-bet-panel {
+    left: 600px;
+    width: calc(100% - 600px);
+  }
+  .mini-bubble-bet-panel {
+    left: 730px;
+    width: calc(100% - 730px);
+  }
+  .mini-livescore-bet-panel {
+    left: 597px;
+    width: calc(100% - 597px);
+  }
+
+  .east-bet-panel {
+    left: 720px;
+    width: calc(100% - 720px);
+  }
+
+  .mini-ifram-lock {
+    display: none;
+  }
+}
+
+@media (max-width: 1440px) {
+  #sureframe {
+    width: 100%;
+  }
+  #mini-game-frame-container {
+    position: static;
+  }
+
+  .mini-game-frame {
+    position: static;
+    transform: translateX(-241px);
+  }
+  .sure-game-frame {
+    position: static;
+    transform: translateX(-241px);
+    transform: translateY(-241px);
+  }
+
+  .mini-game-boscoreball-frame {
+    position: absolute;
+    transform: translateX(-241px);
+  }
+  
+  .mini-bet-panel ,
+  .mini-sure-bet-panel,
+  .mini-surel-bet-panel,
+  .mini-surer-bet-panel,
+  .mini-boscore-bet-panel,
+  .mini-boscoreball-bet-panel,
+  .mini-livescore-bet-panel,
+  .mini-bubble-bet-panel {
+    position: static;
+    width: 100%;
+    float: left;
+  }
+
+  #east-game-frame-container {
+    position: static;
+  }
+
+  .east-game-frame {
+    position: static;
+    transform: translateX(-110px);
+  }
+
+  .east-bet-panel {
+    position: static;
+    width: 100%;
+    float: left;
+  }
+
+  .playerbox3 {
+    height: 1282px;
+  }
+  
+  .east-playerbox3 {
+    height: 1201px;
+  }
+
+  .boscore-playerbox3 {
+    height: 1200px;
+  }
+  .boscoreball-playerbox3 {
+    height: 1405px;
+  }
+
+  .bubble-playerbox3 {
+    height: 1250px;
+  }
+
+  .livescore-playerbox3 {
+    height: 1490px;
+  }
+  .mini-bubble-bet-panel {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #sureframe {
+    height: auto;
+  }
+  .mini-game-frame, .sure-game-frame, .mini-game-boscoreball-frame, .east-game-frame {
+    position: absolute;
+  }
+
+  .live-tmenu-name,
+  .live-tmenu-countdown {
+    font-size: 11px;
+  }
+
+  .mini-bet-type-name {
+    height: 24px;
+    margin: 0 0 8px 5px;
+    width: calc(100% - 10px);
+  }
+  
+  .mini-bet-panel,
+  .mini-sure-bet-panel,
+  .mini-surel-bet-panel,
+  .mini-surer-bet-panel,
+  .mini-boscore-bet-panel,
+  .mini-boscoreball-bet-panel,
+  .mini-bubble-bet-panel,
+  .mini-livescore-bet-panel,
+  .east-bet-panel {
+    height: auto;
+  }
+
+  .playerbox3,
+  .east-playerbox3,
+  .boscore-playerbox3,
+  .boscoreball-playerbox3,
+  .livescore-playerbox3,
+  .bubble-playerbox3 {
+    height: auto;
+  }
+
+  #ifboxa {
+    position: absolute;
+  }
+}

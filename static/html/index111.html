@@ -1,0 +1,126 @@
+<!--<iframe name="betgames_iframe_1" frameborder="0" id="betgames_iframe_1" allowfullscreen="yes" scrolling="no" src="https://demo-webiframe.betgames.tv/#/auth?apiUrl=https%3A%2F%2Fbetgames9.betgames.tv&amp;partnerCode=testpartner&amp;partnerToken=bgtv-demo-token-23216&amp;language=en&amp;timezone=0&amp;pageName=15&amp;homeUrl=https%3A%2F%2Fdemo.betgames.tv%3Fbgpage%3Dlobby" width="100%" height="100%"></iframe>-->
+<!--<iframe src="https://demo-webiframe.betgames.tv/#/auth?apiUrl=https%3A%2F%2Fbetgames9.betgames.tv&amp;partnerCode=testpartner&amp;partnerToken=bgtv-demo-token-23216&amp;language=en&amp;timezone=0&amp;pageName=15&amp;homeUrl=https%3A%2F%2Fdemo.betgames.tv%3Fbgpage%3Dlobby" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
+   </iframe>-->
+   <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <title>BETGAMES.TV DEMO</title>
+    <meta content="NOINDEX, NOFOLLOW" name="ROBOTS" />
+</head>
+
+<body class="">
+  <div>
+    <div id="iframe-content" style="margin:0 auto; display: none;">
+        <div id="betgames_div_iframe"></div>
+        <!-- betgames frame -->
+        <!-- <script type="text/javascript">
+           
+            const clientUrl = 'https://demo-webiframe.betgames.tv';
+            
+            (function () {
+                document.write('<' + 'script type="text/javascript" src="' + clientUrl + '/public/betgames.js' + '?' + Date.now() + '"><' + '/script>');
+            })();
+        </script> -->
+        <script type="text/javascript">
+            const clientUrl = 'https://demo-webiframe.betgames.tv';
+            const script = document.createElement('script');
+
+            script.onload = function () {
+                window.BetGames.setup({
+                    containerId: 'betgames_div_iframe',
+                    clientUrl: clientUrl,
+                    apiUrl: 'https://betgames9.betgames.tv',
+                    partnerCode: 'testpartner',
+                    partnerToken: 'bgtv-demo-token-23918',
+                    language: 'en',
+                    timezone: '0',
+                    homeUrl: 'https://demo.betgames.tv?bgpage=lobby',
+                    defaultPage: '',
+                    defaultGame: '7',
+                });
+            };
+            script.type = 'text/javascript';
+            script.src = clientUrl + '/public/betgames.js' + '?' + Date.now();
+
+            document.head.appendChild(script);
+            // window.BetGames.setup({
+            //     containerId: 'betgames_div_iframe',
+            //     clientUrl: clientUrl,
+            //     apiUrl: 'https://betgames9.betgames.tv',
+            //     partnerCode: 'testpartner',
+            //     partnerToken: 'bgtv-demo-token-23914',
+            //     language: 'en',
+            //     timezone: '0',
+            //     homeUrl: 'https://demo.betgames.tv?bgpage=lobby',
+            //     defaultPage: '',
+            //     defaultGame: '7',
+            // });
+            
+            setTimeout(() => {
+                var iframe = document.getElementById("betgames_iframe")
+                
+                iframe.src = 'https://demo-webiframe.betgames.tv/game/11/0';
+                var frame = document.getElementById("iframe-content")
+                frame.style.display = "block";
+            }, 1000)
+        </script> <!-- // -->
+        <script type="text/javascript">
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        
+            ga('create', 'UA-33127408-4', 'betgames.tv');
+            ga('send', 'pageview');
+        </script>
+        <script type="text/javascript">
+            (function(ss, ex) {
+                window.ldfdr = window.ldfdr || function()
+                {
+                    (ldfdr._q = ldfdr._q || []).push([].slice.call(arguments));
+                };
+                (function(d, s) {
+                    fs = d.getElementsByTagName(s)[0];
+            
+                    function ce(src)
+                    {
+                        var cs = d.createElement(s);
+                        cs.src = src;
+                        cs.async = 1;
+                        fs.parentNode.insertBefore(cs, fs);
+                    };
+                    ce('https://sc.lfeeder.com/lftracker_v1_' + ss + (ex ? '_' + ex : '') + '.js');
+                })(document, 'script');
+            })('DzLR5a5Jvr08BoQ2');
+        </script>
+    </div>
+  </div>
+  
+    <!-- <script type="text/javascript">
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-33127408-4', 'betgames.tv');
+    ga('send', 'pageview');
+    </script> -->
+</body>
+</html>

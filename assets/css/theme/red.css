@@ -1,0 +1,45 @@
+/*
+Template Name: Color Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.6
+Version: 2.0.0
+Author: Sean Ngu
+Website: http://www.seantheme.com/color-admin-v2.0/admin/ajax/
+*/
+
+.navbar-logo,
+.coming-soon .brand .logo,
+.login .login-header .brand .logo {
+    border-color: #F8504B #cc4946 #993734;
+}
+.navbar.navbar-inverse .navbar-brand,
+.sidebar .nav > li.active > a, 
+.sidebar .nav > li.active > a:focus, 
+.sidebar .nav > li.active > a:hover,
+.label.label-theme,
+.btn.btn-scroll-to-top {
+    background: #ff5b57;
+}
+.navbar.navbar-inverse .navbar-brand {
+    color: #fff !important;
+}
+.text-theme,
+.sidebar .sub-menu > li.active > a:before {
+    color: #ff5b57;
+}
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-header {
+	border-bottom:2px solid #000000;
+	/*background: url('linear-gradient.png') 0 0 repeat-x;*/
+	background: -webkit-linear-gradient(180deg, #2D353C, #111);
+	background:    -moz-linear-gradient(180deg, #2D353C, #111);
+	background:     -ms-linear-gradient(180deg, #2D353C, #111);
+	background:      -o-linear-gradient(180deg, #2D353C, #111);
+	background:         linear-gradient(180deg, #2D353C, #111);
+    }
+}
+
+
+/* Added in v1.5 */
+.pace .pace-activity {
+    border-top-color: #ff5b57;
+    border-left-color: #ff5b57;
+}
