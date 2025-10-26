@@ -1,0 +1,31 @@
+<template>
+  <svg
+    data-ds-icon="FavouriteFilled"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    class="icon"
+  >
+    <path
+      fill="currentColor"
+      d="M12 19.48 6.72 21.9c-.82.37-1.73-.29-1.63-1.18l.67-5.77-3.93-4.28c-.61-.66-.26-1.74.62-1.92l5.7-1.15L11 2.54c.44-.79 1.57-.79 2.02 0l2.85 5.06 5.7 1.15c.88.18 1.23 1.25.62 1.92l-3.93 4.28.67 5.77c.1.9-.81 1.56-1.63 1.18l-5.28-2.42z"
+    ></path>
+  </svg>
+</template>
+
+<script>
+export default {
+  name: "FavoritesIcon",
+};
+</script>
+
+<style scoped>
+.icon {
+  fill: currentcolor;
+  width: 18px;
+  min-width: 18px;
+  height: auto;
+}
+</style>

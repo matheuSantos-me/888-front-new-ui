@@ -60,4 +60,18 @@ export default {
   margin: 0 30px;
   padding: 0px 24px 48px;
 }
+
+@media (max-width: 1450px) {
+  .content {
+    margin: 0 20px;
+    padding: 0 0 48px;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    margin: 0 10px;
+    padding: 0 0 48px;
+  }
+}
 </style>
