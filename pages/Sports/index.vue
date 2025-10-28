@@ -17,7 +17,7 @@
 
       <PopularEventsList />
 
-      <!-- <TableBets /> -->
+      <TableBets />
 
       <DetailsBets />
     </div>

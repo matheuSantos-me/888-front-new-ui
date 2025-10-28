@@ -2,14 +2,16 @@
   <div class="container">
     <div class="content-headers">
       <div class="content-labels">
-        <RollbitOriginalsIcon />
+        <CasinoIcon />
 
-        <a href="/category/rollbit" class="title">ROLLBIT ORIGINALS</a>
-
-        <a href="/category/rollbit" class="text-link">View All</a>
+        <a href="/casino" class="title">SUGGESTIONS</a>
       </div>
 
       <div class="content-actions-carousel">
+        <div>
+          <span>Recommended</span>
+        </div>
+
         <button
           class="button-action-carousel"
           @click="scrollLeft"
@@ -29,86 +31,86 @@
     </div>
 
     <div ref="carousel" class="container-cards">
-      <a href="/casino/game" class="card">
+      <div class="card">
         <img src="./icons/SweetBonanza.png" alt="SweetBonanza" />
-      </a>
+      </div>
 
-      <a href="/casino/game" class="card">
+      <div class="card">
         <img src="./icons/GatesOfOlympus.png" alt="GatesOfOlympus" />
-      </a>
+      </div>
 
-      <a href="/casino/game" class="card">
+      <div class="card">
         <img src="./icons/Mines.png" alt="Mines" />
-      </a>
+      </div>
 
-      <a href="/casino/game" class="card">
+      <div class="card">
         <img src="./icons/FruitParty.png" alt="FruitParty" />
-      </a>
+      </div>
 
-      <a href="/casino/game" class="card">
+      <div class="card">
         <img src="./icons/SugarRush.png" alt="SugarRush" />
-      </a>
+      </div>
 
-      <a href="/casino/game" class="card">
+      <div class="card">
         <img src="./icons/Plinko.png" alt="Plinko" />
-      </a>
+      </div>
 
-      <a href="/casino/game" class="card">
+      <div class="card">
         <img src="./icons/Xflip.png" alt="Xflip" />
-      </a>
+      </div>
 
-      <a href="/casino/game" class="card">
+      <div class="card">
         <img src="./icons/Blackjack.png" alt="Blackjack" />
-      </a>
+      </div>
 
-      <a href="/casino/game" class="card">
+      <div class="card">
         <img src="./icons/GemsBonanza.png" alt="GemsBonanza" />
-      </a>
+      </div>
 
-      <a href="/casino/game" class="card">
+      <div class="card">
         <img src="./icons/StarlightPrincess.png" alt="StarlightPrincess" />
-      </a>
+      </div>
 
-      <a href="/casino/game" class="card">
+      <div class="card">
         <img src="./icons/Mental.png" alt="Mental" />
-      </a>
+      </div>
 
-      <a href="/casino/game" class="card">
+      <div class="card">
         <img src="./icons/Xroulette.png" alt="Xroulette" />
-      </a>
+      </div>
 
-      <a href="/casino/game" class="card">
+      <div class="card">
         <img src="./icons/Xcrash.png" alt="Xcrash" />
-      </a>
+      </div>
 
-      <a href="/casino/game" class="card">
+      <div class="card">
         <img src="./icons/Rollercoaster.png" alt="Rollercoaster" />
-      </a>
+      </div>
 
-      <a href="/casino/game" class="card">
+      <div class="card">
         <img src="./icons/Duelarena.png" alt="Duelarena" />
-      </a>
+      </div>
 
-      <a href="/casino/game" class="card">
+      <div class="card">
         <img src="./icons/Crazytime.png" alt="Crazytime" />
-      </a>
+      </div>
 
-      <a href="/casino/game" class="card">
+      <div class="card">
         <img src="./icons/WantedDeadoraWild.png" alt="WantedDeadoraWild" />
-      </a>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import RollbitOriginalsIcon from "./icons/RollbitOriginalsIcon.vue";
+import CasinoIcon from "./icons/CasinoIcon.vue";
 import ArrowLeftIcon from "./icons/ArrowLeftIcon.vue";
 import ArrowRightIcon from "./icons/ArrowRightIcon.vue";
 
 export default {
-  name: "CarouselRollbitOriginals",
+  name: "CarouselSuggestionCasino",
   components: {
-    RollbitOriginalsIcon,
+    CasinoIcon,
     ArrowLeftIcon,
     ArrowRightIcon,
   },
@@ -146,7 +148,6 @@ export default {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #fff;
 }
 
 .title {
@@ -162,21 +163,27 @@ export default {
   text-decoration: none;
 }
 
-.text-link {
-  text-transform: none;
-  font-size: 14px;
-  font-family: "Geogrotesque Wide", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  cursor: pointer;
-  color: #ffb018;
-  margin-left: 16px;
-}
-
 .content-actions-carousel {
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.content-actions-carousel div {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  min-height: 24px;
+  padding: 0px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: "Geogrotesque Wide", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  cursor: default;
+  margin-right: 15px;
+  color: #fff;
+  background: #cbd7ff0e;
 }
 
 .button-action-carousel {

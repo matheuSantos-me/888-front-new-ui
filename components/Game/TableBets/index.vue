@@ -79,7 +79,7 @@ export default {
   data() {
     return {
       activeTab: "High Rollers",
-      tabs: ["All Bets", "High Rollers", "Race Classification"],
+      tabs: ["My Bets", "All Bets", "High Rollers", "Race Classification"],
       bets: [],
       nextId: 0,
     };
