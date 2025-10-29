@@ -538,6 +538,43 @@ export default {
   height: 100%;
   background-color: rgb(31, 35, 48);
   overflow: hidden auto;
+
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(88, 96, 116, 0.6) transparent;
+  scrollbar-gutter: stable;
+}
+
+.css-hc67zf::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+
+.css-hc67zf::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.css-hc67zf::-webkit-scrollbar-thumb {
+  background: rgba(88, 96, 116, 0);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: background 0.15s ease;
+}
+
+.css-hc67zf:hover::-webkit-scrollbar-thumb {
+  background: rgba(88, 96, 116, 0.65);
+  background-clip: content-box;
+}
+
+.css-hc67zf::-webkit-scrollbar-thumb:active {
+  background: rgba(142, 151, 173, 0.9);
+  background-clip: content-box;
+}
+
+.css-hc67zf::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 .css-rfkr36 {

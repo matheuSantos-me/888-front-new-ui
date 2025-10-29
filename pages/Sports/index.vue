@@ -7,7 +7,7 @@
 
       <CarouselSports />
 
-      <ActiveEventsTabs />
+      <CarouselActiveEventsTabs />
 
       <Card />
       
@@ -30,7 +30,7 @@
 import CarouselPromotion from "~/components/NewSports/CarouselPromotion";
 import SportsTabs from "~/components/NewSports/SportsTabs";
 import CarouselSports from "~/components/NewSports/CarouselSports";
-import ActiveEventsTabs from "~/components/NewSports/ActiveEventsTabs";
+import CarouselActiveEventsTabs from "~/components/NewSports/CarouselActiveEventsTabs";
 import PopularEventsList from "~/components/NewSports/PopularEventsList";
 import Card from "~/components/NewSports/Card";
 import TableBets from "~/components/NewSports/TableBets";
@@ -44,7 +44,7 @@ export default {
     CarouselPromotion,
     SportsTabs,
     CarouselSports,
-    ActiveEventsTabs,
+    CarouselActiveEventsTabs,
     PopularEventsList,
     Card,
     TableBets,

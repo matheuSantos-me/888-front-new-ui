@@ -1578,7 +1578,7 @@ export default {
   height: 100vh;
   background: #181b23;
   border-right: 1px solid rgba(255, 255, 255, 0.05);
-  z-index: 20; 
+  z-index: 20;
 }
 
 .main-content-area {
@@ -1588,6 +1588,52 @@ export default {
   overflow-x: hidden;
   z-index: 10;
   transition: margin-left 0.3s ease;
+}
+
+.main-content-area {
+  position: relative;
+  margin-left: var(--sidebar-width, 260px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 10;
+  transition: margin-left 0.3s ease;
+
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(88, 96, 116, 0.6) transparent;
+  scrollbar-gutter: stable;
+}
+
+.main-content-area::-webkit-scrollbar {
+  width: 8px; 
+  height: 8px;
+  background: transparent;
+}
+
+.main-content-area::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+.main-content-area::-webkit-scrollbar-thumb {
+  background: rgba(88, 96, 116, 0); 
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: background 0.15s ease;
+}
+
+.main-content-area:hover::-webkit-scrollbar-thumb {
+  background: rgba(88, 96, 116, 0.65);
+  background-clip: content-box;
+}
+
+.main-content-area::-webkit-scrollbar-thumb:active {
+  background: rgba(142, 151, 173, 0.9);
+  background-clip: content-box;
+}
+
+.main-content-area::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 /* @media (max-width: 1024px) {
@@ -1619,7 +1665,6 @@ export default {
     margin-left: 0 !important; /* conteúdo ocupa a tela toda */
   }
 }
-
 </style>
 <style
   lang="css"
