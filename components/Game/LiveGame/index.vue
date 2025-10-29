@@ -1,41 +1,4 @@
 <template>
-  <!-- <div class="live-game">
-    <div class="content">
-      <p class="error-text">Failed to start third party demo session.</p>
-
-      <div class="currency-select">
-        <span>통화 표기</span>
-        <div class="dropdown">
-          <span class="symbol">$</span>
-
-          <span>{{ selectedCurrency }}</span>
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke="#fff"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 9l6 6 6-6"
-            />
-          </svg>
-        </div>
-      </div>
-
-      <button class="join-btn">가입하기</button>
-    </div>
-
-    <div class="footer">
-      <span class="logo">Stake</span>
-    </div>
-  </div> -->
-
   <div class="container">
     <div v-if="!isMobile">
       <div class="content">
@@ -157,7 +120,7 @@ export default {
   position: relative;
   display: inline-block;
   width: 50px;
-  height: 25px; /* altura reduzida */
+  height: 25px;
 }
 
 .switch input {
@@ -179,7 +142,6 @@ export default {
   box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
-/* bolinha */
 .slider:before {
   position: absolute;
   content: "";
@@ -193,16 +155,14 @@ export default {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 }
 
-/* quando ativo */
 input:checked + .slider {
-  background-color: #22c55e; /* verde estilo iOS */
+  background-color: #22c55e;
 }
 
 input:checked + .slider:before {
   transform: translateX(25px);
 }
 
-/* Efeito de foco */
 .slider:active:before {
   width: 22px;
 }

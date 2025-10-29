@@ -38,17 +38,17 @@
             "
           >
             <div class="teams">
-              <div class="team">
+              <a href="/sports/live" class="team">
                 <img :src="match.home.logo" :alt="match.home.name" />
 
                 <span>{{ match.home.name }}</span>
-              </div>
+              </a>
 
-              <div class="team">
+              <a href="/sports/live" class="team">
                 <img :src="match.away.logo" :alt="match.away.name" />
 
                 <span>{{ match.away.name }}</span>
-              </div>
+              </a>
             </div>
 
             <div class="results">
@@ -324,12 +324,19 @@ export default {
   display: flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .team img {
   width: 20px;
   height: 20px;
   border-radius: 50%;
+}
+
+.team span {
+  color: #fff;
+  font-size: 16px;
 }
 
 .scores {
