@@ -1,78 +1,83 @@
 <template>
-  <el-row class="width-full">
-    <div class="container">
-      <div :style="{ width: !showActionGraph ? '100%' : '70%' }">
-        <CryptoHeader
-          :price="lastPriceFmt"
-          :priceColor="priceColor"
-          :high="highFmt"
-          :low="lowFmt"
-          :volume="volumeFmt"
-          :variation="variationFmt"
-          :tick="selectedTick"
-          @update:tick="selectedTick = $event"
-        />
+  <div class="container">
+    <div class="content">
+      <div style="display: flex;">
+        <div :style="{ width: !showActionGraph ? '100%' : '70%' }">
+          <CryptoHeader
+            :price="lastPriceFmt"
+            :priceColor="priceColor"
+            :high="highFmt"
+            :low="lowFmt"
+            :volume="volumeFmt"
+            :variation="variationFmt"
+            :tick="selectedTick"
+            @update:tick="selectedTick = $event"
+          />
 
-        <div
-          :style="{
-            height:
-              window && window.innerWidth > 770
-                ? window.innerWidth + 'px'
-                : '410px',
-            position: 'relative',
-            width: '100%',
-          }"
-        >
-          <svg ref="chart" style="height: 100%; width: 100%"></svg>
+          <div
+            :style="{
+              height:
+                window && window.innerWidth > 770
+                  ? window.innerWidth + 'px'
+                  : '410px',
+              position: 'relative',
+              width: '100%',
+            }"
+          >
+            <svg ref="chart" style="height: 100%; width: 100%"></svg>
 
-          <button v-if="viewDomain" class="live-button" @click="resetToLive">
-            ▶▶
-          </button>
+            <button v-if="viewDomain" class="live-button" @click="resetToLive">
+              ▶▶
+            </button>
+          </div>
         </div>
+
+        <ActionGraph
+          v-if="showActionGraph"
+          :selected-direction="selectedDirection"
+          :wager="wager"
+          :current-multiplier="currentMultiplier"
+          :bust-price="bustPrice"
+          :is-loading="isLoadingCreateBet"
+          @update:direction="selectedDirection = $event"
+          @update:wager="wager = $event"
+          @update:multiplier="currentMultiplier = $event"
+          @place-bet="saveBet"
+        />
       </div>
 
-      <ActionGraph
-        v-if="showActionGraph"
-        :selected-direction="selectedDirection"
-        :wager="wager"
-        :current-multiplier="currentMultiplier"
-        :bust-price="bustPrice"
-        :is-loading="isLoadingCreateBet"
-        @update:direction="selectedDirection = $event"
-        @update:wager="wager = $event"
-        @update:multiplier="currentMultiplier = $event"
-        @place-bet="saveBet"
+      <ToggleTabs
+        :selected-tab="selectedTabList"
+        :selected-public-tab="selectedTabListPublicBets"
+        @change-tab="selectedTabList = $event"
+        @change-public-tab="selectedTabListPublicBets = $event"
+      />
+
+      <BetsTable
+        v-if="selectedTabList === 'ACTIVE'"
+        :bets="activeBets"
+        type="ACTIVE"
+        :loading-close-bet-ids="loadingCloseBetIds"
+        @close-bet="closeBet"
+      />
+
+      <BetsTable
+        v-if="selectedTabList === 'CLOSED'"
+        :bets="closedBets"
+        type="CLOSED"
+      />
+
+      <BetsTable
+        v-if="selectedTabList === 'PUBLIC'"
+        :bets="filteredBets"
+        type="PUBLIC"
       />
     </div>
 
-    <ToggleTabs
-      :selected-tab="selectedTabList"
-      :selected-public-tab="selectedTabListPublicBets"
-      @change-tab="selectedTabList = $event"
-      @change-public-tab="selectedTabListPublicBets = $event"
-    />
-
-    <BetsTable
-      v-if="selectedTabList === 'ACTIVE'"
-      :bets="activeBets"
-      type="ACTIVE"
-      :loading-close-bet-ids="loadingCloseBetIds"
-      @close-bet="closeBet"
-    />
-
-    <BetsTable
-      v-if="selectedTabList === 'CLOSED'"
-      :bets="closedBets"
-      type="CLOSED"
-    />
-
-    <BetsTable
-      v-if="selectedTabList === 'PUBLIC'"
-      :bets="filteredBets"
-      type="PUBLIC"
-    />
-  </el-row>
+    <Footer />
+  </div>
 </template>
+
 
 <script>
 import * as d3 from "d3";
@@ -82,6 +87,7 @@ import ActionGraph from "./components/ActionGraph.vue";
 import BetsTable from "./components/BetsTable.vue";
 import CryptoHeader from "./components/CryptoHeader.vue";
 import ToggleTabs from "./components/ToggleTabs.vue";
+import Footer from "~/components/NewComponents/Footer";
 
 export default {
   layout: ({ isBlock }) => (isBlock ? "block" : "client"),
@@ -91,6 +97,7 @@ export default {
     BetsTable,
     CryptoHeader,
     ToggleTabs,
+    Footer
   },
   props: { pillOffset: { type: Number, default: -10 } },
   data() {
@@ -911,11 +918,34 @@ export default {
 
 <style scoped>
 .container {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
-  margin: 30px 0;
-  padding: 0px;
+  padding: 0;
+}
+
+.content {
+  margin: 90px 30px 0;
+  padding: 0px 24px 48px;
+}
+
+@media (max-width: 1450px) {
+  .content {
+    margin: 90px 20px 0;
+    padding: 0 0 48px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    margin: 140px 20px 0;
+    padding: 0 0 48px;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    margin: 140px 10px 0;
+    padding: 0 0 48px;
+  }
 }
 
 .axis text {

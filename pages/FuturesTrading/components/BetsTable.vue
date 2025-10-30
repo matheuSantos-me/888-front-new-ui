@@ -120,19 +120,10 @@ export default {
 .betting-table-container {
   width: 100%;
   overflow-x: auto;
-  margin-bottom: 100px;
-}
-
-@media (max-width: 770px) {
-  .betting-table-container {
-    margin-bottom: 100px;
-    padding: 0 10px;
-  }
 }
 
 .betting-table {
-  min-width: 900px;
-  width: 100%;
+  min-width: calc(100vw - 100px);
   border-collapse: collapse;
   background-color: #1a1a1a;
   color: white;

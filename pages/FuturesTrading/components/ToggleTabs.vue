@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="width: 100%; margin-top: 35px;">
     <div class="toggle-container">
       <button
         v-for="tab in mainTabs"
@@ -95,14 +95,7 @@ export default {
   align-items: center;
   background-color: #1e1e1e;
   border-radius: 10px;
-  overflow: hidden;
   margin-bottom: -5px;
-}
-
-@media (max-width: 770px) {
-  .toggle-container {
-    margin: 0 10px;
-  }
 }
 
 .toggle-btn {
