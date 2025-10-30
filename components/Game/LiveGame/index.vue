@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div v-if="!isMobile">
-      <div class="content">
+      <!-- <div class="content">
         <p style="color: #ed4163; font-size: 14px">
           Failed to start third party demo session.
         </p>
@@ -27,7 +27,10 @@
         </div>
 
         <button class="join-btn">가입하기</button>
-      </div>
+      </div> -->
+
+      <!-- adicionamos ref="gameImage" para manipular fullscreen -->
+      <img ref="gameImage" src="./icons/Game.png" alt="Game" class="game-image" />
     </div>
 
     <div
@@ -43,7 +46,12 @@
         <div style="display: flex; align-items: center; gap: 30px">
           <img
             src="./icons/SweetBonanza.png"
-            style="height: 350px; width: 250px; border-radius: 8px; object-fit: cover;"
+            style="
+              height: 350px;
+              width: 250px;
+              border-radius: 8px;
+              object-fit: cover;
+            "
             alt="SweetBonanza"
           />
 
@@ -95,22 +103,55 @@
         <button class="join-btn">가입하기</button>
       </div>
     </div>
+
+    <div v-if="!isMobile" class="card-footer">
+      <!-- botão agora chama toggleFullScreen -->
+      <button class="button-footer" @click="toggleFullScreen">
+        <ExpandIcon />
+      </button>
+
+      <img src="./icons/rollbit-logo-glow.svg" alt="Logo" />
+
+      <div class="texts-footer">
+        <span>Diversão</span>
+        <span>Jogo Real</span>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import MoneyIcon from "./icons/MoneyIcon.vue";
+import ExpandIcon from "./icons/ExpandIcon.vue";
 
 export default {
   name: "LiveGame",
   components: {
     MoneyIcon,
+    ExpandIcon,
   },
   data() {
     return {
       selectedCurrency: "USD",
       isMobile: window.innerWidth <= 1000,
     };
+  },
+  methods: {
+    async toggleFullScreen() {
+      const imageElement = this.$refs.gameImage;
+
+      if (!imageElement) return;
+
+      if (!document.fullscreenElement) {
+        try {
+          await imageElement.requestFullscreen();
+        } catch (err) {
+          console.error("Erro ao entrar em tela cheia:", err);
+        }
+      } else {
+        document.exitFullscreen();
+      }
+    },
   },
 };
 </script>
@@ -168,16 +209,14 @@ input:checked + .slider:before {
 }
 
 .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   background-color: #cbd7ff08;
-  color: #fff;
-  display: flex;
-  min-height: 500px;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 90px;
   border-radius: 8px;
+  overflow: hidden;
+  margin-top: 90px;
 }
 
 @media (max-width: 1024px) {
@@ -268,5 +307,60 @@ input:checked + .slider:before {
 .logo {
   font-family: "Pacifico", cursive;
   font-size: 20px;
+}
+
+.image-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.game-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- ADIÇÃO: estilo fullscreen --- */
+:fullscreen .game-image {
+  width: 100vw !important;
+  height: 100vh !important;
+  object-fit: contain;
+  background-color: #000;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(15, 17, 26, 0.55);
+  padding: 15px 20px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  flex-shrink: 0;
+}
+
+.button-footer {
+  all: unset;
+  cursor: pointer;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.texts-footer {
+  background-color: #cbd7ff08;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.texts-footer span {
+  color: #b1bad3;
+  font-size: 16px;
 }
 </style>

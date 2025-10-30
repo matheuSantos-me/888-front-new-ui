@@ -24,7 +24,7 @@
       </svg>
     </div>
 
-    <transition v-if="!isMobile" name="accordion">
+    <transition name="accordion">
       <div v-if="isOpen" class="matches-container">
         <nav class="nav-tabs">
           <button
